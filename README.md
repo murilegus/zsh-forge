@@ -4,18 +4,18 @@ Collection of Zsh custom plugins
 
 ## List of Zsh plugins
 
-- [uvenv](https://github.com/trungit2001/zsh-forge/zsh-uvenv) - A wrapper on the Python package/project management tool [astral-sh/uv](https://github.com/astral-sh/uv)
+- [uvenv](zsh-uvenv) - A `workon`-style virtual environment manager on top of the Python package/project management tool [astral-sh/uv](https://github.com/astral-sh/uv)
 
 ## Installation
 
-Download repository using Git clone/Download ZIP file [zsh-forge](https://github.com/trungit2001/zsh-forge)
+Download the repository with Git clone or as a ZIP file: [zsh-forge](https://github.com/murilegus/zsh-forge)
 
-### Method 1: Source when usage
+### Method 1: Source it
 
 1. **Download repository**
 2. **Add to shell config**
 
-    ```bash
+    ```zsh
     source /path/to/zsh-forge/zsh-*/zsh-*.zsh
     # Example:
     # source ~/Downloads/zsh-forge/zsh-uvenv/zsh-uvenv.zsh
@@ -24,15 +24,14 @@ Download repository using Git clone/Download ZIP file [zsh-forge](https://github
 ### Method 2: Add to Zsh custom plugins folder
 
 1. **Download repository**
-2. **Execute command to copy specified plugin you want**
+2. **Run the installer** to copy plugins into `$ZSH_CUSTOM/plugins`
 
-    - By default, copy plugin into `$ZSH_CUSTOM/plugins`
-
-    ```bash
-    chmod a+x ./install && ./install
+    ```zsh
+    sh ./install.sh              # every plugin
+    sh ./install.sh zsh-uvenv    # only the plugins you name
     ```
 
-    - Add plugin name to `.zshrc` plugins to use it.
+3. **Add the plugin name** (e.g. `zsh-uvenv`) to `plugins=(...)` in `.zshrc`.
 
 ## Usage
 

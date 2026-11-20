@@ -1,10 +1,8 @@
 _uvenv_version() {
-    local version_file="${ZSH_PLUGIN_PATH}/.version"
+    local version_file="${UVENV_PLUGIN_PATH}/.version"
 
     if [[ -f $version_file ]]; then
-        local ver
-        ver=$(<"$version_file")
-        echo "uvenv $ver"
+        echo "uvenv $(<"$version_file")"
     else
         echo "uvenv unknown"
     fi
